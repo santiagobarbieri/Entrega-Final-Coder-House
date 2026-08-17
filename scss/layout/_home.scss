@@ -1,0 +1,141 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as mix;
+
+.home {
+  @include mix.site-width;
+}
+
+.home-hero {
+  min-height: min(76vh, 50rem);
+  padding: clamp(3rem, 8vh, 7rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+
+  h2 {
+    max-width: 90rem;
+    font-size: clamp(3.5rem, 10vw, 9.5rem);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+  }
+}
+
+.home-hero-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(2rem, 6vh, 5rem);
+
+  p {
+    max-width: 38rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+  }
+}
+
+.text-link {
+  @include mix.focus-ring;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: $color-texto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+
+  &:hover,
+  &:focus-visible { color: $color-acento; }
+}
+
+.home-selection {
+  padding: clamp(2.5rem, 5vw, 5rem) 0;
+  border-top: 1px solid $color-texto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+
+  h3 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    letter-spacing: -0.04em;
+  }
+}
+
+.home-records {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid $color-texto;
+  border-bottom: 1px solid $color-texto;
+}
+
+.home-record {
+  position: relative;
+  display: flex;
+  min-height: clamp(20rem, 32vw, 31rem);
+  padding: clamp(1.25rem, 2.5vw, 2.5rem);
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid $color-texto;
+  color: $color-texto;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+
+  &:last-child { border-right: 0; }
+  &:hover, &:focus-visible { background-color: $color-acento; }
+  &:focus-visible { outline: 3px solid $color-texto; outline-offset: -6px; }
+
+  .record-number,
+  .record-meta {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    margin-top: 0.65rem;
+    font-size: clamp(2.5rem, 5vw, 5.25rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+  }
+
+  p { margin-top: 0.65rem; }
+  .record-arrow { position: absolute; top: 1.5rem; right: 1.5rem; }
+}
+
+.home-manifesto {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(3rem, 7vw, 7rem) 0;
+
+  p {
+    max-width: 58rem;
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .home-hero { min-height: auto; }
+  .home-records { grid-template-columns: 1fr; }
+  .home-record {
+    min-height: 18rem;
+    border-right: 0;
+    border-bottom: 1px solid $color-texto;
+    &:last-child { border-bottom: 0; }
+  }
+  .home-manifesto { grid-template-columns: 1fr; }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .home-hero h2 { font-size: clamp(3rem, 16vw, 5rem); }
+  .home-hero-footer, .section-heading { align-items: flex-start; flex-direction: column; }
+}

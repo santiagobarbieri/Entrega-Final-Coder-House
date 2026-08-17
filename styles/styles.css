@@ -53,17 +53,17 @@ select {
   color: #6f9daa;
 }
 
-header {
+header.navbar {
   width: 100%;
   max-width: 1600px;
   margin-inline: auto;
-  padding: clamp(1rem, 2.5vw, 2.5rem) clamp(1rem, 2.5vw, 2.5rem);
+  padding: clamp(1.5rem, 3vw, 3.25rem) clamp(1rem, 2.5vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
-header .brand {
+header.navbar .brand {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -71,28 +71,28 @@ header .brand {
   color: #020202;
   text-decoration: none;
 }
-header .brand img {
+header.navbar .brand img {
   display: block;
   width: auto;
   height: clamp(2rem, 4vw, 3.125rem);
 }
-header .brand h1 {
+header.navbar .brand h1 {
   color: #020202;
   font-size: clamp(1.15rem, 2vw, 2rem);
   line-height: 1;
 }
-header nav ul {
+header.navbar nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: clamp(0.25rem, 1.25vw, 1.5rem);
   list-style: none;
 }
-header nav a:focus-visible {
+header.navbar nav a:focus-visible {
   outline: 2px solid #6f9daa;
   outline-offset: 3px;
 }
-header nav a {
+header.navbar nav a {
   display: block;
   padding: 0.625rem 0.5rem;
   color: #020202;
@@ -100,38 +100,38 @@ header nav a {
   white-space: nowrap;
   transition: color 180ms ease;
 }
-header nav a:hover, header nav a:focus-visible, header nav a[aria-current=page] {
+header.navbar nav a:hover, header.navbar nav a:focus-visible, header.navbar nav a[aria-current=page] {
   color: #6f9daa;
 }
-header nav a[aria-current=page] {
+header.navbar nav a[aria-current=page] {
   text-decoration: underline;
   text-underline-offset: 0.35em;
 }
-header .navbar-toggler:focus-visible {
+header.navbar .navbar-toggler:focus-visible {
   outline: 2px solid #6f9daa;
   outline-offset: 3px;
 }
-header .navbar-toggler {
+header.navbar .navbar-toggler {
   color: #020202;
   border: 1px solid #020202;
   border-radius: 0;
   padding: 0.65rem 0.7rem;
   transition: color 180ms ease, background-color 180ms ease;
 }
-header .navbar-toggler:hover, header .navbar-toggler[aria-expanded=true] {
+header.navbar .navbar-toggler:hover, header.navbar .navbar-toggler[aria-expanded=true] {
   background-color: #6f9daa;
 }
-header .navbar-toggler:focus {
+header.navbar .navbar-toggler:focus {
   box-shadow: none;
 }
-header .navbar-toggler .navbar-toggler-icon {
+header.navbar .navbar-toggler .navbar-toggler-icon {
   position: relative;
   display: block;
   width: 1.35rem;
   height: 0.9rem;
   background: linear-gradient(currentColor, currentColor) center/100% 1px no-repeat;
 }
-header .navbar-toggler .navbar-toggler-icon::before, header .navbar-toggler .navbar-toggler-icon::after {
+header.navbar .navbar-toggler .navbar-toggler-icon::before, header.navbar .navbar-toggler .navbar-toggler-icon::after {
   position: absolute;
   left: 0;
   width: 100%;
@@ -139,10 +139,10 @@ header .navbar-toggler .navbar-toggler-icon::before, header .navbar-toggler .nav
   background: currentColor;
   content: "";
 }
-header .navbar-toggler .navbar-toggler-icon::before {
+header.navbar .navbar-toggler .navbar-toggler-icon::before {
   top: 0;
 }
-header .navbar-toggler .navbar-toggler-icon::after {
+header.navbar .navbar-toggler .navbar-toggler-icon::after {
   bottom: 0;
 }
 
@@ -172,6 +172,167 @@ header .navbar-toggler .navbar-toggler-icon::after {
   text-underline-offset: 0.2em;
 }
 
+.home {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: 0 clamp(1rem, 2.5vw, 2.5rem);
+}
+
+.home-hero {
+  min-height: min(76vh, 50rem);
+  padding: clamp(3rem, 8vh, 7rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+}
+.home-hero h2 {
+  max-width: 90rem;
+  font-size: clamp(3.5rem, 10vw, 9.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.home-hero-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(2rem, 6vh, 5rem);
+}
+.home-hero-footer p {
+  max-width: 38rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.text-link:focus-visible {
+  outline: 2px solid #6f9daa;
+  outline-offset: 3px;
+}
+.text-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: #020202;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+.text-link:hover, .text-link:focus-visible {
+  color: #6f9daa;
+}
+
+.home-selection {
+  padding: clamp(2.5rem, 5vw, 5rem) 0;
+  border-top: 1px solid #020202;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.section-heading h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.04em;
+}
+
+.home-records {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #020202;
+  border-bottom: 1px solid #020202;
+}
+
+.home-record {
+  position: relative;
+  display: flex;
+  min-height: clamp(20rem, 32vw, 31rem);
+  padding: clamp(1.25rem, 2.5vw, 2.5rem);
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #020202;
+  color: #020202;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+.home-record:last-child {
+  border-right: 0;
+}
+.home-record:hover, .home-record:focus-visible {
+  background-color: #6f9daa;
+}
+.home-record:focus-visible {
+  outline: 3px solid #020202;
+  outline-offset: -6px;
+}
+.home-record .record-number,
+.home-record .record-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.home-record h4 {
+  margin-top: 0.65rem;
+  font-size: clamp(2.5rem, 5vw, 5.25rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+.home-record p {
+  margin-top: 0.65rem;
+}
+.home-record .record-arrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.home-manifesto {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(3rem, 7vw, 7rem) 0;
+}
+.home-manifesto p {
+  max-width: 58rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: auto;
+  }
+  .home-records {
+    grid-template-columns: 1fr;
+  }
+  .home-record {
+    min-height: 18rem;
+    border-right: 0;
+    border-bottom: 1px solid #020202;
+  }
+  .home-record:last-child {
+    border-bottom: 0;
+  }
+  .home-manifesto {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .home-hero h2 {
+    font-size: clamp(3rem, 16vw, 5rem);
+  }
+  .home-hero-footer, .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
 .mid-row {
   width: 100%;
   max-width: 1600px;
@@ -484,23 +645,23 @@ header .navbar-toggler .navbar-toggler-icon::after {
   }
 }
 @media (max-width: 767.98px) {
-  header {
+  header.navbar {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.75rem;
   }
-  header nav {
+  header.navbar nav {
     flex-basis: 100%;
     width: 100%;
     border-top: 1px solid #020202;
     border-bottom: 1px solid #020202;
   }
-  header nav ul {
+  header.navbar nav ul {
     align-items: stretch;
     gap: 0;
   }
-  header nav a {
+  header.navbar nav a {
     min-height: 44px;
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(2, 2, 2, 0.2);
@@ -509,7 +670,7 @@ header .navbar-toggler .navbar-toggler-icon::after {
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
-  header nav li:last-child a {
+  header.navbar nav li:last-child a {
     border-bottom: 0;
   }
   .container {
@@ -517,10 +678,10 @@ header .navbar-toggler .navbar-toggler-icon::after {
   }
 }
 @media (max-width: 480px) {
-  header {
-    padding: 1rem;
+  header.navbar {
+    padding: 1.25rem;
   }
-  header nav a {
+  header.navbar nav a {
     display: flex;
     align-items: center;
   }

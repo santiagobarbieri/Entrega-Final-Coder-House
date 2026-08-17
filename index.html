@@ -27,31 +27,62 @@
         </nav>
     </header>
 
-    <main>
-        <section class="container">
-            <h2>MUSIC WORTH REMEMBERING</h2>
-            <p>
-                Un archivo de discos, imágenes, canciones y momentos que dejaron una marca.
-                <br>
-                EXPLORE THE ARCHIVE by <a href="pages/about.html">Santiago Barbieri</a>
-            </p>
+    <main class="home">
+        <section class="home-hero">
+            <span class="eyebrow">Independent music archive · Buenos Aires</span>
+            <h2>MUSIC WORTH<br>REMEMBERING</h2>
+            <div class="home-hero-footer">
+                <p>Discos, canciones e historias que siguen resonando. Un recorrido personal por la música que dejó una marca.</p>
+                <a class="text-link" href="pages/archive.html">Explorar el archivo <span aria-hidden="true">↗</span></a>
+            </div>
         </section>
 
-        <nav class="mid-row" aria-label="Géneros musicales">
-            <div class="year-range">
-                <span>1960 — 2026</span>
+        <section class="home-selection" aria-labelledby="selection-title">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Start listening</span>
+                    <h3 id="selection-title">Tres discos para empezar</h3>
+                </div>
+                <a class="text-link" href="pages/featured.html">Ver selección del mes <span aria-hidden="true">→</span></a>
             </div>
-            <ul class="filters">
-                <li><a href="pages/archive.html" class="filter-btn active">All</a></li>
-                <li><a href="#" class="filter-btn">Jazz</a></li>
-                <li><a href="#" class="filter-btn">Rock</a></li>
-                <li><a href="#" class="filter-btn">Classical</a></li>
-                <li><a href="#" class="filter-btn">Pop</a></li>
-                <li><a href="#" class="filter-btn">Folk</a></li>
-                <li><a href="#" class="filter-btn">Electronic</a></li>
-                <li><a href="#" class="filter-btn">Hip Hop</a></li>
-            </ul>
-        </nav>
+            <div class="home-records">
+                <a class="home-record" href="pages/archive.html">
+                    <span class="record-number">01</span>
+                    <div>
+                        <span class="record-meta">1971 · Folk</span>
+                        <h4>Blue</h4>
+                        <p>Joni Mitchell</p>
+                    </div>
+                    <span class="record-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="home-record" href="pages/archive.html">
+                    <span class="record-number">02</span>
+                    <div>
+                        <span class="record-meta">1973 · Rock</span>
+                        <h4>Artaud</h4>
+                        <p>Pescado Rabioso</p>
+                    </div>
+                    <span class="record-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="home-record" href="pages/archive.html">
+                    <span class="record-number">03</span>
+                    <div>
+                        <span class="record-meta">1997 · Electronic</span>
+                        <h4>Homogenic</h4>
+                        <p>Björk</p>
+                    </div>
+                    <span class="record-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-manifesto">
+            <span class="eyebrow">About Barracuda</span>
+            <div>
+                <p>No buscamos ordenar la música como una enciclopedia. Construimos conexiones entre épocas, escenas y sonidos para volver a escuchar con otros oídos.</p>
+                <a class="text-link" href="pages/about.html">Conocer el proyecto <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

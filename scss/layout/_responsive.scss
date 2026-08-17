@@ -1,7 +1,7 @@
 @use "../utilities/variables" as *;
 
 @media (max-width: 767.98px) {
-  header {
+  header.navbar {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,8 +40,8 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  header {
-    padding: 1rem;
+  header.navbar {
+    padding: 1.25rem;
 
     nav a { display: flex; align-items: center; }
   }

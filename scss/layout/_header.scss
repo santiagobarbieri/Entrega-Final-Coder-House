@@ -1,8 +1,8 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as mix;
 
-header {
-  @include mix.site-width(clamp(1rem, 2.5vw, 2.5rem));
+header.navbar {
+  @include mix.site-width(clamp(1.5rem, 3vw, 3.25rem));
   @include mix.flex-between(2rem);
 
   .brand {
