@@ -57,4 +57,15 @@ header {
 
     }
   }
+
+  .navbar-toggler {
+    @include mix.focus-ring;
+    border: 1px solid rgba($color-texto, 0.35);
+    border-radius: 0;
+    padding: 0.4rem 0.55rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }

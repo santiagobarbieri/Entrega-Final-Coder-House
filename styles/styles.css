@@ -76,6 +76,18 @@ header nav a[aria-current=page] {
   text-decoration: underline;
   text-underline-offset: 0.35em;
 }
+header .navbar-toggler:focus-visible {
+  outline: 2px solid #6f9daa;
+  outline-offset: 3px;
+}
+header .navbar-toggler {
+  border: 1px solid rgba(2, 2, 2, 0.35);
+  border-radius: 0;
+  padding: 0.4rem 0.55rem;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+}
 
 .container {
   width: 100%;
@@ -414,28 +426,25 @@ header nav a[aria-current=page] {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
   header nav {
+    flex-basis: 100%;
     width: 100%;
   }
   header nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, max-content);
-    justify-content: space-between;
-    gap: 0.25rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  header nav ul::-webkit-scrollbar {
-    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.75rem;
   }
   header nav a {
-    padding: 0.5rem 0.25rem;
+    min-height: 44px;
+    padding: 0.65rem 0;
   }
   .container {
     margin-top: clamp(2rem, 7vh, 4.5rem);
@@ -445,13 +454,7 @@ header nav a[aria-current=page] {
   header {
     padding: 1rem;
   }
-  header nav ul {
-    grid-template-columns: repeat(3, 1fr);
-    overflow: visible;
-    row-gap: 0.25rem;
-  }
   header nav a {
-    min-height: 44px;
     display: flex;
     align-items: center;
     font-size: 0.875rem;

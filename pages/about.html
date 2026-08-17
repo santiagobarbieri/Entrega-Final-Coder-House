@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conocé la historia y el propósito de Barracuda.">
     <title>About — Barracuda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
+    <header class="navbar navbar-expand-md">
         <a class="brand" href="../index.html" aria-label="Barracuda, inicio">
             <img src="../assets/img/logo.png" alt="">
             <h1>Barracuda</h1>
         </a>
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-                <li><a href="featured.html">Featured</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="archive.html">Archive</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú de navegación"><span class="navbar-toggler-icon"></span></button>
+        <nav class="collapse navbar-collapse" id="mainNav" aria-label="Principal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html" aria-current="page">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="featured.html">Featured</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
             </ul>
         </nav>
     </header>
@@ -45,5 +47,6 @@
         <span>Curado por Santiago Barbieri</span>
         <span>Buenos Aires · 2026</span>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
