@@ -60,12 +60,40 @@ header {
 
   .navbar-toggler {
     @include mix.focus-ring;
-    border: 1px solid rgba($color-texto, 0.35);
+    color: $color-texto;
+    border: 1px solid $color-texto;
     border-radius: 0;
-    padding: 0.4rem 0.55rem;
+    padding: 0.65rem 0.7rem;
+    transition: color 180ms ease, background-color 180ms ease;
+
+    &:hover,
+    &[aria-expanded="true"] {
+      background-color: $color-acento;
+    }
 
     &:focus {
       box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      position: relative;
+      display: block;
+      width: 1.35rem;
+      height: 0.9rem;
+      background: linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      &::before { top: 0; }
+      &::after { bottom: 0; }
     }
   }
 }

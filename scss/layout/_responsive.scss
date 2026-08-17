@@ -10,16 +10,26 @@
     nav {
       flex-basis: 100%;
       width: 100%;
+      border-top: 1px solid $color-texto;
+      border-bottom: 1px solid $color-texto;
 
       ul {
         align-items: stretch;
         gap: 0;
-        padding-top: 0.75rem;
       }
 
       a {
         min-height: 44px;
-        padding: 0.65rem 0;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba($color-texto, 0.2);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      li:last-child a {
+        border-bottom: 0;
       }
     }
   }
@@ -33,11 +43,7 @@
   header {
     padding: 1rem;
 
-    nav a {
-      display: flex;
-      align-items: center;
-      font-size: 0.875rem;
-    }
+    nav a { display: flex; align-items: center; }
   }
 
   .container {
