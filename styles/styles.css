@@ -255,9 +255,22 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid #020202;
-  color: #020202;
+  color: #e6e6e1;
   text-decoration: none;
+  overflow: hidden;
   transition: background-color 180ms ease;
+}
+.home-record::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 2, 2, 0.18) 20%, rgba(2, 2, 2, 0.88) 100%);
+  content: "";
+  pointer-events: none;
+}
+.home-record > *:not(.record-cover) {
+  position: relative;
+  z-index: 2;
 }
 .home-record:last-child {
   border-right: 0;
@@ -289,6 +302,30 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+}
+.home-record .record-cover {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+.home-record .record-cover-placeholder {
+  display: grid;
+  place-items: center;
+  color: #020202;
+  background: #6f9daa;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+.home-record:hover .record-cover, .home-record:focus-visible .record-cover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 
 .home-manifesto {
@@ -473,15 +510,29 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 }
 
 .feature-card {
+  position: relative;
   display: flex;
   min-height: clamp(25rem, 52vw, 44rem);
   padding: clamp(1.25rem, 2.5vw, 2.5rem);
   flex-direction: column;
   justify-content: space-between;
   background: #e6e6e1;
-  color: #020202;
+  color: #e6e6e1;
   text-decoration: none;
+  overflow: hidden;
   transition: background-color 180ms ease, color 180ms ease;
+}
+.feature-card::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 2, 2, 0.2) 15%, rgba(2, 2, 2, 0.9) 100%);
+  content: "";
+  pointer-events: none;
+}
+.feature-card > *:not(.feature-cover) {
+  position: relative;
+  z-index: 2;
 }
 .feature-card:hover, .feature-card:focus-visible {
   background: #6f9daa;
@@ -493,6 +544,29 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 .feature-card .number {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
+}
+.feature-card .feature-cover {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+.feature-card .feature-cover-placeholder {
+  display: grid;
+  place-items: center;
+  color: #020202;
+  background: #6f9daa;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 700;
+}
+.feature-card:hover .feature-cover, .feature-card:focus-visible .feature-cover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 .feature-card h3 {
   font-size: clamp(2.25rem, 4.5vw, 5rem);
@@ -524,7 +598,7 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 
 .archive-item {
   display: grid;
-  grid-template-columns: 5rem 1fr 1fr auto;
+  grid-template-columns: 5rem 5rem 1fr 1fr auto;
   gap: 1rem;
   align-items: center;
   padding: 1.25rem 0;
@@ -538,6 +612,29 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 }
 .archive-item span {
   line-height: 1.4;
+}
+
+.archive-cover {
+  display: block;
+  width: 5rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.archive-cover-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px solid #020202;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.archive-item:hover .archive-cover,
+.archive-item:focus-visible .archive-cover {
+  filter: grayscale(0%);
+  transform: scale(1.04);
 }
 
 .contact-layout {
@@ -642,7 +739,10 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
     min-height: 28rem;
   }
   .archive-item {
-    grid-template-columns: 4rem 1fr auto;
+    grid-template-columns: 4rem 4rem 1fr auto;
+  }
+  .archive-cover {
+    width: 4rem;
   }
   .archive-item .archive-meta {
     display: none;
@@ -656,7 +756,10 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
     font-size: clamp(3.5rem, 20vw, 6rem);
   }
   .archive-item {
-    grid-template-columns: 3.5rem 1fr;
+    grid-template-columns: 3.5rem 3.5rem 1fr;
+  }
+  .archive-cover {
+    width: 3.5rem;
   }
   .archive-item .archive-arrow {
     display: none;
