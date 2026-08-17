@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Archivo musical de Barracuda.">
-    <title>Archive — Barracuda</title>
+    <title>Archivo — Barracuda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
@@ -17,18 +17,18 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú de navegación"><span class="navbar-toggler-icon"></span></button>
         <nav class="collapse navbar-collapse" id="mainNav" aria-label="Principal">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="featured.html">Featured</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="archive.html" aria-current="page">Archive</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Proyecto</a></li>
+                <li class="nav-item"><a class="nav-link" href="featured.html">Destacados</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="archive.html" aria-current="page">Archivo</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-shell">
         <section class="page-intro">
-            <h2>Archive</h2>
+            <h2>Archivo</h2>
             <div>
                 <span class="eyebrow">1960 — 2026</span>
                 <p>Una colección abierta de artistas, discos y momentos para volver a escuchar.</p>
@@ -36,119 +36,119 @@
         </section>
         <nav class="mid-row" aria-label="Filtros del archivo">
             <div class="year-range">
-                <span>Browse by genre</span>
+                <span>Explorar por género</span>
                 <span class="result-count" id="resultCount" aria-live="polite">14 resultados</span>
             </div>
             <ul class="filters">
-                <li><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" aria-controls="archiveList">All</button></li>
+                <li><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" aria-controls="archiveList">Todos</button></li>
                 <li><button class="filter-btn" type="button" data-filter="rock" aria-pressed="false" aria-controls="archiveList">Rock</button></li>
                 <li><button class="filter-btn" type="button" data-filter="pop" aria-pressed="false" aria-controls="archiveList">Pop</button></li>
                 <li><button class="filter-btn" type="button" data-filter="folk" aria-pressed="false" aria-controls="archiveList">Folk</button></li>
-                <li><button class="filter-btn" type="button" data-filter="electronic" aria-pressed="false" aria-controls="archiveList">Electronic</button></li>
+                <li><button class="filter-btn" type="button" data-filter="electronic" aria-pressed="false" aria-controls="archiveList">Electrónica</button></li>
                 <li><button class="filter-btn" type="button" data-filter="ambient" aria-pressed="false" aria-controls="archiveList">Ambient</button></li>
                 <li><button class="filter-btn" type="button" data-filter="hip-hop" aria-pressed="false" aria-controls="archiveList">Hip Hop</button></li>
                 <li><button class="filter-btn" type="button" data-filter="salsa" aria-pressed="false" aria-controls="archiveList">Salsa</button></li>
             </ul>
         </nav>
         <section class="archive-list" id="archiveList" aria-label="Entradas del archivo">
-            <a class="archive-item" href="#" data-genres="folk rock">
+            <article class="archive-item" data-genres="folk rock">
                 <img class="archive-cover" src="../assets/img/bringing-it-all-back-home.jpg" alt="Portada del álbum Bringing It All Back Home de Bob Dylan">
                 <span>1965</span>
                 <strong>Bringing It All Back Home</strong>
                 <span class="archive-meta">Bob Dylan · Folk / Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock">
                 <img class="archive-cover" src="../assets/img/the-velvet-underground-and-nico.jpg" alt="Portada del álbum The Velvet Underground &amp; Nico">
                 <span>1967</span>
                 <strong>The Velvet Underground &amp; Nico</strong>
                 <span class="archive-meta">The Velvet Underground &amp; Nico · Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock folk">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock folk">
                 <img class="archive-cover" src="../assets/img/all-things-must-pass.jpg" alt="Portada del álbum All Things Must Pass de George Harrison">
                 <span>1970</span>
                 <strong>All Things Must Pass</strong>
                 <span class="archive-meta">George Harrison · Rock / Folk</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock">
                 <img class="archive-cover" src="../assets/img/artaud.jpg" alt="Portada del álbum Artaud de Pescado Rabioso">
                 <span>1973</span>
                 <strong>Artaud</strong>
                 <span class="archive-meta">Pescado Rabioso · Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock">
                 <img class="archive-cover" src="../assets/img/llegando-los-monos.jpg" alt="Portada del álbum Llegando los Monos de Sumo">
                 <span>1986</span>
                 <strong>Llegando los Monos</strong>
                 <span class="archive-meta">Sumo · Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="salsa">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="salsa">
                 <img class="archive-cover" src="../assets/img/show.jpg" alt="Portada del álbum Show de Frankie Ruiz">
                 <span>1996</span>
                 <strong>Show</strong>
                 <span class="archive-meta">Frankie Ruiz · Salsa</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock folk">
-                <img class="archive-cover" src="../assets/img/in-the-aeroplane-over-the-sea.jpg" alt="Portada del álbum In the Aeroplane Over the Sea de Neutral Milk Hotel">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock folk">
+                <img class="archive-cover" src="../assets/img/in-the-aeroplane-over-the-sea.avif" alt="Portada del álbum In the Aeroplane Over the Sea de Neutral Milk Hotel">
                 <span>1998</span>
                 <strong>In the Aeroplane Over the Sea</strong>
-                <span class="archive-meta">Neutral Milk Hotel · Indie Rock / Folk</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock electronic">
+                <span class="archive-meta">Neutral Milk Hotel · Rock indie / Folk</span>
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock electronic">
                 <img class="archive-cover" src="../assets/img/yoshimi-battles-the-pink-robots.jpg" alt="Portada del álbum Yoshimi Battles the Pink Robots de The Flaming Lips">
                 <span>2002</span>
                 <strong>Yoshimi Battles the Pink Robots</strong>
-                <span class="archive-meta">The Flaming Lips · Psychedelic Rock / Electronic</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="electronic rock">
+                <span class="archive-meta">The Flaming Lips · Rock psicodélico / Electrónica</span>
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="electronic rock">
                 <img class="archive-cover" src="../assets/img/sound-of-silver.jpg" alt="Portada del álbum Sound of Silver de LCD Soundsystem">
                 <span>2007</span>
                 <strong>Sound of Silver</strong>
-                <span class="archive-meta">LCD Soundsystem · Electronic / Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="hip-hop">
-                <img class="archive-cover" src="../assets/img/some-rap-songs.jpg" alt="Portada del álbum Some Rap Songs de Earl Sweatshirt">
+                <span class="archive-meta">LCD Soundsystem · Electrónica / Rock</span>
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="hip-hop">
+                <img class="archive-cover" src="../assets/img/some-rap-songs.webp" alt="Portada del álbum Some Rap Songs de Earl Sweatshirt">
                 <span>2018</span>
                 <strong>Some Rap Songs</strong>
                 <span class="archive-meta">Earl Sweatshirt · Hip Hop</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="pop rock">
-                <img class="archive-cover" src="../assets/img/titanic-rising.jpg" alt="Portada del álbum Titanic Rising de Weyes Blood">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="pop rock">
+                <img class="archive-cover" src="../assets/img/titanic-rising.webp" alt="Portada del álbum Titanic Rising de Weyes Blood">
                 <span>2019</span>
                 <strong>Titanic Rising</strong>
-                <span class="archive-meta">Weyes Blood · Art Pop / Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock">
-                <img class="archive-cover" src="../assets/img/3d-country.jpg" alt="Portada del álbum 3D Country de Geese">
+                <span class="archive-meta">Weyes Blood · Pop artístico / Rock</span>
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock">
+                <img class="archive-cover" src="../assets/img/3d-country.webp" alt="Portada del álbum 3D Country de Geese">
                 <span>2023</span>
                 <strong>3D Country</strong>
                 <span class="archive-meta">Geese · Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="ambient electronic">
-                <img class="archive-cover" src="../assets/img/secret-life.jpg" alt="Portada del álbum Secret Life de Fred Again.., Brian Eno">
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="ambient electronic">
+                <img class="archive-cover" src="../assets/img/secret-life.webp" alt="Portada del álbum Secret Life de Fred again.. y Brian Eno">
                 <span>2023</span>
                 <strong>Secret Life</strong>
-                <span class="archive-meta">Fred again.. &amp; Brian Eno · Ambient / Electronic</span>
-                <span class="archive-arrow">↗</span>
-            </a>
-            <a class="archive-item" href="#" data-genres="rock">
+                <span class="archive-meta">Fred again.. &amp; Brian Eno · Ambient / Electrónica</span>
+                <span class="archive-kind">Álbum</span>
+            </article>
+            <article class="archive-item" data-genres="rock">
                 <img class="archive-cover" src="../assets/img/reality-awaits.jpg" alt="Portada del álbum Reality Awaits de The Strokes">
                 <span>2026</span>
                 <strong>Reality Awaits</strong>
                 <span class="archive-meta">The Strokes · Rock</span>
-                <span class="archive-arrow">↗</span>
-            </a>
+                <span class="archive-kind">Álbum</span>
+            </article>
             <p class="archive-empty" id="archiveEmpty" hidden>No hay entradas en esta categoría por ahora.</p>
         </section>
     </main>

@@ -185,7 +185,7 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 }
 .home-hero h2 {
   max-width: 90rem;
-  font-size: clamp(3.5rem, 10vw, 9.5rem);
+  font-size: clamp(4rem, 8.5vw, 8.5rem);
   line-height: 0.82;
   letter-spacing: -0.065em;
 }
@@ -363,7 +363,7 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 }
 @media (max-width: 480px) {
   .home-hero h2 {
-    font-size: clamp(3rem, 16vw, 5rem);
+    font-size: clamp(2.75rem, 15vw, 4.5rem);
   }
   .home-hero-footer, .section-heading {
     align-items: flex-start;
@@ -464,7 +464,7 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   border-bottom: 1px solid #020202;
 }
 .page-intro h2 {
-  font-size: clamp(4rem, 12vw, 11rem);
+  font-size: clamp(4rem, 8.5vw, 8.5rem);
   line-height: 0.82;
   letter-spacing: -0.07em;
   text-transform: uppercase;
@@ -473,6 +473,14 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   max-width: 34rem;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.5;
+}
+
+.featured-page .page-intro {
+  grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 0.35fr);
+}
+.featured-page .page-intro h2 {
+  letter-spacing: -0.06em;
+  white-space: nowrap;
 }
 
 .eyebrow {
@@ -579,8 +587,11 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   line-height: 1.5;
 }
 .feature-card .read-more {
+  display: inline-block;
   margin-top: 2rem;
+  color: inherit;
   font-weight: 700;
+  text-underline-offset: 0.25em;
   text-transform: uppercase;
 }
 
@@ -612,6 +623,13 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 }
 .archive-item span {
   line-height: 1.4;
+}
+
+.archive-kind {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .archive-cover {
@@ -732,6 +750,9 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   .page-intro, .about-grid, .contact-layout {
     grid-template-columns: 1fr;
   }
+  .featured-page .page-intro {
+    grid-template-columns: 1fr;
+  }
   .feature-list {
     grid-template-columns: 1fr;
   }
@@ -753,7 +774,11 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
     margin-top: 2.5rem;
   }
   .page-intro h2 {
-    font-size: clamp(3.5rem, 20vw, 6rem);
+    font-size: clamp(2.75rem, 15vw, 4.5rem);
+    white-space: normal;
+  }
+  .featured-page .page-intro h2 {
+    white-space: normal;
   }
   .archive-item {
     grid-template-columns: 3.5rem 3.5rem 1fr;
@@ -762,6 +787,9 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
     width: 3.5rem;
   }
   .archive-item .archive-arrow {
+    display: none;
+  }
+  .archive-item .archive-kind {
     display: none;
   }
   .site-footer {

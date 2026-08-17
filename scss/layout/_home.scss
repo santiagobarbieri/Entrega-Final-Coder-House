@@ -11,7 +11,7 @@
 
   h2 {
     max-width: 90rem;
-    font-size: clamp(3.5rem, 10vw, 9.5rem);
+    font-size: $display-title-size;
     line-height: 0.82;
     letter-spacing: -0.065em;
   }
@@ -179,6 +179,6 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  .home-hero h2 { font-size: clamp(3rem, 16vw, 5rem); }
+  .home-hero h2 { font-size: $display-title-mobile; }
   .home-hero-footer, .section-heading { align-items: flex-start; flex-direction: column; }
 }

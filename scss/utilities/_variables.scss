@@ -8,3 +8,7 @@ $color-acento: #6f9daa;
 //breakpoints
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
+
+// Escala compartida para los titulares principales de las cinco páginas.
+$display-title-size: clamp(4rem, 8.5vw, 8.5rem);
+$display-title-mobile: clamp(2.75rem, 15vw, 4.5rem);
