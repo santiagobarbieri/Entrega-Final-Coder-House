@@ -37,23 +37,36 @@
         <nav class="mid-row" aria-label="Filtros del archivo">
             <div class="year-range">
                 <span>Browse by genre</span>
-                <span class="result-count" id="resultCount" aria-live="polite">5 resultados</span>
+                <span class="result-count" id="resultCount" aria-live="polite">14 resultados</span>
             </div>
             <ul class="filters">
                 <li><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" aria-controls="archiveList">All</button></li>
-                <li><button class="filter-btn" type="button" data-filter="jazz" aria-pressed="false" aria-controls="archiveList">Jazz</button></li>
                 <li><button class="filter-btn" type="button" data-filter="rock" aria-pressed="false" aria-controls="archiveList">Rock</button></li>
-                <li><button class="filter-btn" type="button" data-filter="classical" aria-pressed="false" aria-controls="archiveList">Classical</button></li>
                 <li><button class="filter-btn" type="button" data-filter="pop" aria-pressed="false" aria-controls="archiveList">Pop</button></li>
                 <li><button class="filter-btn" type="button" data-filter="folk" aria-pressed="false" aria-controls="archiveList">Folk</button></li>
                 <li><button class="filter-btn" type="button" data-filter="electronic" aria-pressed="false" aria-controls="archiveList">Electronic</button></li>
+                <li><button class="filter-btn" type="button" data-filter="ambient" aria-pressed="false" aria-controls="archiveList">Ambient</button></li>
+                <li><button class="filter-btn" type="button" data-filter="hip-hop" aria-pressed="false" aria-controls="archiveList">Hip Hop</button></li>
+                <li><button class="filter-btn" type="button" data-filter="salsa" aria-pressed="false" aria-controls="archiveList">Salsa</button></li>
             </ul>
         </nav>
         <section class="archive-list" id="archiveList" aria-label="Entradas del archivo">
-            <a class="archive-item" href="#" data-genres="folk">
-                <span>1971</span>
-                <strong>Blue</strong>
-                <span class="archive-meta">Joni Mitchell · Folk</span>
+            <a class="archive-item" href="#" data-genres="folk rock">
+                <span>1965</span>
+                <strong>Bringing It All Back Home</strong>
+                <span class="archive-meta">Bob Dylan · Folk / Rock</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="rock">
+                <span>1967</span>
+                <strong>The Velvet Underground &amp; Nico</strong>
+                <span class="archive-meta">The Velvet Underground &amp; Nico · Rock</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="rock folk">
+                <span>1970</span>
+                <strong>All Things Must Pass</strong>
+                <span class="archive-meta">George Harrison · Rock / Folk</span>
                 <span class="archive-arrow">↗</span>
             </a>
             <a class="archive-item" href="#" data-genres="rock">
@@ -62,22 +75,64 @@
                 <span class="archive-meta">Pescado Rabioso · Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#" data-genres="jazz folk">
-                <span>1976</span>
-                <strong>Hejira</strong>
-                <span class="archive-meta">Joni Mitchell · Jazz / Folk</span>
+            <a class="archive-item" href="#" data-genres="rock">
+                <span>1986</span>
+                <strong>Llegando los Monos</strong>
+                <span class="archive-meta">Sumo · Rock</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="salsa">
+                <span>1996</span>
+                <strong>Show</strong>
+                <span class="archive-meta">Frankie Ruiz · Salsa</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="rock folk">
+                <span>1998</span>
+                <strong>In the Aeroplane Over the Sea</strong>
+                <span class="archive-meta">Neutral Milk Hotel · Indie Rock / Folk</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="rock electronic">
+                <span>2002</span>
+                <strong>Yoshimi Battles the Pink Robots</strong>
+                <span class="archive-meta">The Flaming Lips · Psychedelic Rock / Electronic</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="electronic rock">
+                <span>2007</span>
+                <strong>Sound of Silver</strong>
+                <span class="archive-meta">LCD Soundsystem · Electronic / Rock</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="hip-hop">
+                <span>2018</span>
+                <strong>Some Rap Songs</strong>
+                <span class="archive-meta">Earl Sweatshirt · Hip Hop</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="pop rock">
+                <span>2019</span>
+                <strong>Titanic Rising</strong>
+                <span class="archive-meta">Weyes Blood · Art Pop / Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
             <a class="archive-item" href="#" data-genres="rock">
-                <span>1981</span>
-                <strong>Clics modernos</strong>
-                <span class="archive-meta">Charly García · Rock</span>
+                <span>2023</span>
+                <strong>3D Country</strong>
+                <span class="archive-meta">Geese · Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#" data-genres="electronic">
-                <span>1997</span>
-                <strong>Homogenic</strong>
-                <span class="archive-meta">Björk · Electronic</span>
+            <a class="archive-item" href="#" data-genres="ambient electronic">
+                <span>2023</span>
+                <strong>Secret Life</strong>
+                <span class="archive-meta">Fred again.. &amp; Brian Eno · Ambient / Electronic</span>
+                <span class="archive-arrow">↗</span>
+            </a>
+            <a class="archive-item" href="#" data-genres="rock">
+                <span>2026</span>
+                <strong>Reality Awaits</strong>
+                <span class="archive-meta">The Strokes · Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
             <p class="archive-empty" id="archiveEmpty" hidden>No hay entradas en esta categoría por ahora.</p>

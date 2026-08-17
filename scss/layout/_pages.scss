@@ -100,7 +100,10 @@
   border-bottom: 1px solid $color-texto;
   color: $color-texto;
   text-decoration: none;
-  strong { font-size: clamp(1.25rem, 2.5vw, 2rem); }
+  strong {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    overflow-wrap: anywhere;
+  }
   span { line-height: 1.4; }
 }
 
