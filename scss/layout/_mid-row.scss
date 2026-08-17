@@ -1,0 +1,62 @@
+@use "sass:color";
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as mix;
+
+.mid-row {
+  @include mix.site-width;
+  @include mix.flex-between(clamp(1.5rem, 3vw, 2.5rem));
+  margin: clamp(2rem, 6vw, 4rem) auto 0;
+  flex-wrap: wrap;
+  border-top: 1px solid $color-texto;
+  border-bottom: 1px solid $color-texto;
+  padding-block: clamp(1rem, 2vw, 1.5rem);
+
+  .year-range {
+    flex-shrink: 0;
+
+    span {
+      font-size: clamp(0.875rem, 1.2vw, 1rem);
+      font-weight: 600;
+      color: $color-texto;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      .filter-btn {
+        display: inline-block;
+        padding: 0.5rem clamp(0.75rem, 1.2vw, 1rem);
+        font-size: clamp(0.8rem, 1vw, 0.95rem);
+        color: $color-texto;
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        transition: all 200ms ease;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $color-acento;
+          color: $color-acento;
+        }
+
+        &.active {
+          background-color: $color-acento;
+          color: $color-fondo;
+          border-color: $color-acento;
+
+          &:hover {
+            background-color: color.adjust($color-acento, $lightness: -10%);
+            border-color: color.adjust($color-acento, $lightness: -10%);
+          }
+        }
+      }
+    }
+  }
+}

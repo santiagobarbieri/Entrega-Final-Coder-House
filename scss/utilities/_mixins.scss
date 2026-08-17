@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+// Limita el contenido al ancho general del sitio y lo centra.
+@mixin site-width($padding-block: 0) {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: $padding-block clamp(1rem, 2.5vw, 2.5rem);
+}
+
+// Distribución flexible usada en header, filtros y footer.
+@mixin flex-between($gap: 1rem, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+// Estilo compartido por textos pequeños de categoría o sección.
+@mixin uppercase-label($spacing: 0.12em) {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: $spacing;
+  text-transform: uppercase;
+}
+
+// Foco visible y consistente para navegación con teclado.
+@mixin focus-ring($color: $color-acento, $offset: 3px) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+}

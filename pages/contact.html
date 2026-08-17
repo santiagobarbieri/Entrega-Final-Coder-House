@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactá a Barracuda.">
+    <title>Contact — Barracuda</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <a class="brand" href="../index.html" aria-label="Barracuda, inicio">
+            <img src="../assets/img/logo.png" alt="">
+            <h1>Barracuda</h1>
+        </a>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="featured.html">Featured</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <h2>Contact</h2>
+            <p>¿Hay un disco, una historia o un artista que debería formar parte del archivo? Conversemos.</p>
+        </section>
+        <section class="contact-layout">
+            <div class="contact-copy">
+                <span class="eyebrow">Escribinos</span>
+                <p>Recibimos recomendaciones, colaboraciones y proyectos editoriales. Respondemos desde Buenos Aires.</p>
+                <a href="mailto:hola@barracuda.com">hola@barracuda.com</a>
+            </div>
+            <form class="contact-form" action="#" method="post">
+                <div class="field">
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="subject">Asunto</label>
+                    <input id="subject" name="subject" type="text">
+                </div>
+                <div class="field">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="submit-btn" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>hola@barracuda.com</span>
+        <span>Buenos Aires · Argentina</span>
+    </footer>
+</body>
+</html>

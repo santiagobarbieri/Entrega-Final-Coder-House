@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as mix;
+
+.container {
+  @include mix.site-width;
+  margin: clamp(2rem, 8vh, 7rem) auto 0;
+  text-align: left;
+
+  h2 {
+    margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
+    font-size: clamp(3rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    overflow-wrap: anywhere;
+  }
+
+  p {
+    max-width: 42rem;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.6;
+
+    a {
+      color: $color-acento;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+}

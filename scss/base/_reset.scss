@@ -1,0 +1,25 @@
+@use "../utilities/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: $color-fondo;
+  color: $color-texto;
+  font-family: Inter, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: $color-texto;
+  color: $color-acento;
+}

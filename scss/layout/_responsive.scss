@@ -1,0 +1,73 @@
+@use "../utilities/variables" as *;
+
+@media (max-width: $breakpoint-tablet) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+
+    nav {
+      width: 100%;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(5, max-content);
+        justify-content: space-between;
+        gap: 0.25rem;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      a {
+        padding: 0.5rem 0.25rem;
+      }
+    }
+  }
+
+  .container {
+    margin-top: clamp(2rem, 7vh, 4.5rem);
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  header {
+    padding: 1rem;
+
+    nav ul {
+      grid-template-columns: repeat(3, 1fr);
+      overflow: visible;
+      row-gap: 0.25rem;
+    }
+
+    nav a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+  }
+
+  .container {
+    margin-top: 2.5rem;
+    padding-inline: 1rem;
+
+    h2 {
+      font-size: clamp(2.75rem, 17vw, 5rem);
+    }
+
+    p br {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

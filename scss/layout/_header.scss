@@ -1,0 +1,60 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as mix;
+
+header {
+  @include mix.site-width(clamp(1rem, 2.5vw, 2.5rem));
+  @include mix.flex-between(2rem);
+
+  .brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.75rem;
+    color: $color-texto;
+    text-decoration: none;
+
+    img {
+      display: block;
+      width: auto;
+      height: clamp(2rem, 4vw, 3.125rem);
+    }
+
+    h1 {
+      color: $color-texto;
+      font-size: clamp(1.15rem, 2vw, 2rem);
+      line-height: 1;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(0.25rem, 1.25vw, 1.5rem);
+      list-style: none;
+    }
+
+    a {
+      @include mix.focus-ring;
+      display: block;
+      padding: 0.625rem 0.5rem;
+      color: $color-texto;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 180ms ease;
+
+      &:hover,
+      &:focus-visible,
+      &[aria-current="page"] {
+        color: $color-acento;
+      }
+
+      &[aria-current="page"] {
+        text-decoration: underline;
+        text-underline-offset: 0.35em;
+      }
+
+    }
+  }
+}
