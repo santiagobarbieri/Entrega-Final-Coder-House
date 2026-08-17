@@ -37,47 +37,50 @@
         <nav class="mid-row" aria-label="Filtros del archivo">
             <div class="year-range">
                 <span>Browse by genre</span>
+                <span class="result-count" id="resultCount" aria-live="polite">5 resultados</span>
             </div>
             <ul class="filters">
-                <li><a href="#" class="filter-btn active">All</a></li>
-                <li><a href="#" class="filter-btn">Jazz</a></li>
-                <li><a href="#" class="filter-btn">Rock</a></li>
-                <li><a href="#" class="filter-btn">Classical</a></li>
-                <li><a href="#" class="filter-btn">Pop</a></li>
-                <li><a href="#" class="filter-btn">Electronic</a></li>
+                <li><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" aria-controls="archiveList">All</button></li>
+                <li><button class="filter-btn" type="button" data-filter="jazz" aria-pressed="false" aria-controls="archiveList">Jazz</button></li>
+                <li><button class="filter-btn" type="button" data-filter="rock" aria-pressed="false" aria-controls="archiveList">Rock</button></li>
+                <li><button class="filter-btn" type="button" data-filter="classical" aria-pressed="false" aria-controls="archiveList">Classical</button></li>
+                <li><button class="filter-btn" type="button" data-filter="pop" aria-pressed="false" aria-controls="archiveList">Pop</button></li>
+                <li><button class="filter-btn" type="button" data-filter="folk" aria-pressed="false" aria-controls="archiveList">Folk</button></li>
+                <li><button class="filter-btn" type="button" data-filter="electronic" aria-pressed="false" aria-controls="archiveList">Electronic</button></li>
             </ul>
         </nav>
-        <section class="archive-list" aria-label="Entradas del archivo">
-            <a class="archive-item" href="#">
+        <section class="archive-list" id="archiveList" aria-label="Entradas del archivo">
+            <a class="archive-item" href="#" data-genres="folk">
                 <span>1971</span>
                 <strong>Blue</strong>
                 <span class="archive-meta">Joni Mitchell · Folk</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#">
+            <a class="archive-item" href="#" data-genres="rock">
                 <span>1973</span>
                 <strong>Artaud</strong>
                 <span class="archive-meta">Pescado Rabioso · Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#">
+            <a class="archive-item" href="#" data-genres="jazz folk">
                 <span>1976</span>
                 <strong>Hejira</strong>
                 <span class="archive-meta">Joni Mitchell · Jazz / Folk</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#">
+            <a class="archive-item" href="#" data-genres="rock">
                 <span>1981</span>
                 <strong>Clics modernos</strong>
                 <span class="archive-meta">Charly García · Rock</span>
                 <span class="archive-arrow">↗</span>
             </a>
-            <a class="archive-item" href="#">
+            <a class="archive-item" href="#" data-genres="electronic">
                 <span>1997</span>
                 <strong>Homogenic</strong>
                 <span class="archive-meta">Björk · Electronic</span>
                 <span class="archive-arrow">↗</span>
             </a>
+            <p class="archive-empty" id="archiveEmpty" hidden>No hay entradas en esta categoría por ahora.</p>
         </section>
     </main>
 
@@ -86,5 +89,6 @@
         <span>1960 — 2026</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../scripts/archive.js"></script>
 </body>
 </html>

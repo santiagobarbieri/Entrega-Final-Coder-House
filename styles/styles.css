@@ -357,6 +357,14 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   color: #020202;
   letter-spacing: 0.05em;
 }
+.mid-row .year-range .result-count {
+  margin-left: 0.75rem;
+  color: #6f9daa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .mid-row .filters {
   display: flex;
   align-items: center;
@@ -369,6 +377,7 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
   padding: 0.5rem clamp(0.75rem, 1.2vw, 1rem);
   font-size: clamp(0.8rem, 1vw, 0.95rem);
   color: #020202;
+  background: transparent;
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -378,6 +387,10 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 .mid-row .filters li .filter-btn:hover {
   border-color: #6f9daa;
   color: #6f9daa;
+}
+.mid-row .filters li .filter-btn:focus-visible {
+  outline: 2px solid #6f9daa;
+  outline-offset: 2px;
 }
 .mid-row .filters li .filter-btn.active {
   background-color: #6f9daa;
@@ -500,6 +513,13 @@ header.navbar .navbar-toggler .navbar-toggler-icon::after {
 .archive-list {
   margin-top: clamp(2rem, 5vw, 4rem);
   border-top: 1px solid #020202;
+}
+
+.archive-empty {
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  border-bottom: 1px solid #020202;
+  color: #6f9daa;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .archive-item {

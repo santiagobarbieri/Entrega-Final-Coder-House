@@ -84,6 +84,12 @@
 }
 
 .archive-list { margin-top: clamp(2rem, 5vw, 4rem); border-top: 1px solid $color-texto; }
+.archive-empty {
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  border-bottom: 1px solid $color-texto;
+  color: $color-acento;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
 .archive-item {
   @extend %interactive-accent;
   display: grid;

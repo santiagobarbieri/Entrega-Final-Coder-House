@@ -20,6 +20,15 @@
       color: $color-texto;
       letter-spacing: 0.05em;
     }
+
+    .result-count {
+      margin-left: 0.75rem;
+      color: $color-acento;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
   }
 
   .filters {
@@ -35,6 +44,7 @@
         padding: 0.5rem clamp(0.75rem, 1.2vw, 1rem);
         font-size: clamp(0.8rem, 1vw, 0.95rem);
         color: $color-texto;
+        background: transparent;
         text-decoration: none;
         border: 1px solid transparent;
         border-radius: 0.25rem;
@@ -44,6 +54,11 @@
         &:hover {
           border-color: $color-acento;
           color: $color-acento;
+        }
+
+        &:focus-visible {
+          outline: 2px solid $color-acento;
+          outline-offset: 2px;
         }
 
         &.active {
