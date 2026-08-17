@@ -21,6 +21,8 @@ Barracuda es un archivo musical independiente dedicado a discos, artistas e hist
 - Bootstrap 5 para la navegación responsive.
 - JavaScript para el filtrado del archivo.
 - Vercel para el despliegue.
+- Cosmos para busqueda de imagenes
+- Photopea para diseño del logo
 
 ## Desarrollo local
 
